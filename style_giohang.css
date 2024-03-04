@@ -1,0 +1,54 @@
+.link-group{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.link-group:hover{
+    color: gray;
+}
+.btn-xoa-all{
+    border-style: none;
+    background-color: rgb(255, 195, 83);
+    color: black;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+.btn-xoa-all:hover{
+    background-color: #d8b979;
+    color: white;
+}
+
+.hr-giohang{
+    margin: 2px 0;
+    color: rgb(151, 151, 151);
+    border: 0;
+    border-top: 3px solid;
+    opacity: .25;
+}
+
+.sp-btn{
+    border-style: none;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+.sp-btn:hover{
+    background-color: rgb(240, 217, 186);
+}
+
+.san-pham-body{
+    width: 32%;
+    padding: 15px;
+    border-bottom: 1px solid #f8f8f8;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.sp-name{
+    height: 36px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1rem;
+    padding: 5px 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}

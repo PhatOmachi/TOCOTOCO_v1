@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style_giohang.css" />
+    <link rel="stylesheet" href="style_ctsp.css">
+    <link rel="icon" href="https://tocotocotea.com/wp-content/uploads/2021/03/favicon-32x32-1.png">
+  </head>
+  <body ng-app="myapp" >
+    
+    <!-- nav -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+              <div class="collapse navbar-collapse d-flex justify-content-lg-between" id="navbarSupportedContent">
+                <a class="navbar-brand" href="Trang_Chu.html" > 
+                  <img src="hinh/Logo-ngang-01.png" alt="" style="width: 150px; height: 40px;">
+                </a>
+                <div class="d-flex align-items-center w-50">
+                  <i class="fa-solid fa-magnifying-glass" style="color: rgb(130, 130, 130); margin-right: 10px; font-size: 18px;"></i>
+                  <input type="text" class="find" placeholder="Tìm kiếm sản phẩm..." aria-label="Username" aria-describedby="basic-addon1" >
+                </div>
+                <div>
+                  <!-- dangnhap -->
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <!-- body -->
+    
+    <div class="container-md mt-4" >
+  
+      
+      
+      <div class="row">
+  
+        <div class="col-2">
+          <div class="p-2"><i class="fa-solid fa-house"></i> <a href="#!/home" style="text-decoration: none; color: black;">Trang chủ</a></div>
+          <div class="p-2"><i class="fa-solid fa-user"></i> Thông tin tài khoản </div>
+          <div class="p-2"><i class="fa-solid fa-cart-shopping"></i> Đơn hàng của tui </div>
+          <div class="p-2"><i class="fa-solid fa-ticket"></i> Mã khuyến mãi</div>
+          <div class="p-2"><i class="fa-solid fa-right-to-bracket"></i> Đăng Xuất</div>
+        </div>
+        <div class="col-10">
+          <div >
+            <img src="hinh/background-account.png" alt="" style="height: 180px; width: 100%; object-fit: none;">
+          </div>
+          <div>
+            
+            <div class="row">
+              <div class="col-6">
+                <div for="exampleDataList" class="form-label text-center mt-4 fw-bolder" >Số Điện Thoại</div>
+                <input class="form-control" disabled list="datalistOptions" ng-model="sdt" id="exampleDataList" style="border: 1px; border-style: solid; border-color: rgba(128, 128, 128, 0.609);">
+
+                <div for="exampleDataList" class="form-label text-center mt-4 fw-bolder" >Họ và tên</div>
+                <input class="form-control" list="datalistOptions" ng-model="hoten" id="exampleDataList" style="border: 1px; border-style: solid; border-color: rgba(128, 128, 128, 0.609);">
+
+                <div for="exampleDataList" class="form-label mt-4 fw-bolder" >Giới tính</div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio"  ng-model="gioitinh" value="Nam">
+                  <label class="form-check-label" for="flexRadioDefault1" >
+                    Nam
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" ng-model="gioitinh" value="Nu">
+                  <label class="form-check-label" for="flexRadioDefault2" >
+                    Nữ
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div for="exampleDataList" class="form-label text-center mt-4 fw-bolder" >Điểm</div>
+                <input class="form-control" disabled list="datalistOptions" id="exampleDataList" style="border: 1px; border-style: solid; border-color: rgba(128, 128, 128, 0.609);">
+
+                <div for="exampleDataList" class="form-label text-center mt-4 fw-bolder">Sinh nhật</div>
+                <input class="form-control" list="datalistOptions" ng-model="ngaysinh" id="exampleDataList" style="border: 1px; border-style: solid; border-color: rgba(128, 128, 128, 0.609);">
+
+                <div for="exampleDataList" class="form-label text-center mt-4 fw-bolder">Địa chỉ</div>
+                <input class="form-control" list="datalistOptions" ng-model="diachi" id="exampleDataList" style="border: 1px; border-style: solid; border-color: rgba(128, 128, 128, 0.609);">
+              </div>
+
+              <div class="d-flex w-100 justify-content-center">
+                <div for="exampleDataList" class="form-label text-center mt-4 text-bg-danger w-25 p-2 rounded-5 " ng-click="luuthongtin()">Lưu thông tin</div>
+              </div>
+              
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+  
+
+    </div>
+  </body>
+  <script src="controller/angular.min.js"></script>
+  <script src="controller/angular-route.min.js"></script>
+  <script src="../controller/angular-giohang.js"></script>
+  <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/fe7d543762.js" crossorigin="anonymous"></script>
+  <script src="../controller/angular-ctthongtin.js"></script>
+</html>

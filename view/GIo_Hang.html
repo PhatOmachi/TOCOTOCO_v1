@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style_giohang.css" />
+    <link rel="stylesheet" href="style_ctsp.css">
+    <link rel="icon" href="https://tocotocotea.com/wp-content/uploads/2021/03/favicon-32x32-1.png">
+  </head>
+  <body ng-app="myapp" >
+    
+    <!-- nav -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse d-flex justify-content-lg-between" id="navbarSupportedContent">
+                <a class="navbar-brand" href="Trang_Chu.html" > 
+                  <img src="hinh/Logo-ngang-01.png" alt="" style="width: 150px; height: 40px;">
+                </a>
+                <div class="d-flex align-items-center w-50">
+                  <i class="fa-solid fa-magnifying-glass" style="color: rgb(130, 130, 130); margin-right: 10px; font-size: 18px;" ng-click="timkiem()"></i>
+                  <input type="text" class="find" placeholder="Tìm kiếm sản phẩm..." aria-label="Username" aria-describedby="basic-addon1" ng-model="kitutimkiem">
+                </div>
+                <div>
+                  <a href="#" class="btn-login position-relative me-4">
+                    <i class="fa-solid fa-cart-shopping fa-shake"></i>
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{soluong}}
+                      </span>
+                  </a>
+                  <a href="#!view/dangnhap" class="btn-login " ng-if="dangnhap">Login</a>
+                  <a href="#!view/ctthongtin" class="btn-login " ng-if="dangnhap1">{{taiKhoanDaLogin.sdt}}</a>
+                  <!-- dangnhap -->
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <!-- body -->
+    
+    <div class="container-md mt-4" >
+      <div style="    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;" ng-if="showthanhtoan">
+        <div class="card rounded-4">
+          <div class="card-body text-bg-warning rounded-4">
+            <div class="">Không thể xóa khi không có sản phẩm nào</div>
+          </div>
+        </div>
+      </div>
+  
+      
+      
+      <div class="row">
+        <div class="col-3">
+
+
+          <ul class="list-group">
+            <li class="list-group-item fw-bolder" style="background-color: rgb(207, 206, 206);" aria-current="true">
+              Danh Mục
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('All')">Món nổi bậc <span class="badge text-bg-dark">{{indexAll}}</span> </a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('Instant')">Instant Milk Tea <span class="badge text-bg-dark">{{indexInstant}}</span></a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('Trà Sữa')">Trà Sữa <span class="badge text-bg-dark">{{indexTraSua}}</span></a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('Trái Cây')">Fresh Fruit Tea <span class="badge text-bg-dark">{{indexTraiCay}}</span></a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('Cheese')">Macchiato Cream Cheese <span class="badge text-bg-dark">{{indexCheese}}</span></a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('Cafe')">Special Drink <span class="badge text-bg-dark">{{indexCafe}}</span></a>
+            </li>
+            <li class="list-group-item">
+              <a href="" class="link-group d-flex justify-content-between" ng-click="getItem('Kem')">Ice Cream <span class="badge text-bg-dark">{{indexKem}}</span></a>
+            </li>
+          </ul>
+
+          <div class="dropdown mt-2">
+            <button class="btn dropdown-toggle w-100 text-white" style="background-color: rgb(123, 116, 116);" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Giá cả
+            </button>
+            <ul class="dropdown-menu w-100">
+              <li><a class="dropdown-item" ng-click="highToLow()">Từ Cao Đến Thấp</a></li>
+              <li><a class="dropdown-item" ng-click="lowToHigh()">Từ Thấp Đến Cao</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-6 p-0">
+
+          <div class="list-sp1 mb-5" ng-if="booleanAll">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;" >
+              Món nổi bậc<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+    
+              <div class="d-flex flex-wrap ">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | filter: kitutimkiem | orderBy : (sapXep == 'gia' ? 'gia' : '-gia') ">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}} 
+                    <!-- <del class="ms-2" style="font-size: 13px;" ng-if="{{sp.giam}}">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div> 
+                </div>
+              </div>
+          </div>
+          
+          <div class="list-sp1 mb-5" ng-if="booleanTraSua">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;">
+              Trà sữa<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | limitTo : 11 : 0 | orderBy : (sapXep == 'gia' ? 'gia' : '-gia')">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}}
+                    <!-- <del class="ms-2" style="font-size: 13px;">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="list-sp1 mb-5" ng-if="booleanTraiCay">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;">
+              Trái Cây<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | limitTo : 6 : 11 | orderBy : (sapXep == 'gia' ? 'gia' : '-gia')">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}}
+                    <!-- <del class="ms-2" style="font-size: 13px;">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="list-sp1 mb-5" ng-if="booleanCheese">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;">
+              Cheese<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | limitTo : 5 : 17 | orderBy : (sapXep == 'gia' ? 'gia' : '-gia')">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}}
+                    <!-- <del class="ms-2" style="font-size: 13px;">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="list-sp1 mb-5" ng-if="booleanCafe">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;">
+              Cafe<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | limitTo : 3 : 22 | orderBy : (sapXep == 'gia' ? 'gia' : '-gia')">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}}
+                    <!-- <del class="ms-2" style="font-size: 13px;">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="list-sp1 mb-5" ng-if="booleanKem">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;">
+              Kem<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | limitTo : 3 : 25 | orderBy : (sapXep == 'gia' ? 'gia' : '-gia')">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}}
+                    <!-- <del class="ms-2" style="font-size: 13px;">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="list-sp1 mb-5" ng-if="booleanInstant">
+            <div class="d-flex justify-content-center " style="font-weight: 600; background-color: rgb(251, 243, 233); border-radius: 20px;">
+              Instant<i class="fa-solid fa-sort-down ms-2"></i>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="san-pham-body" ng-repeat="sp in GioHang | limitTo : 4 : 28 | orderBy : (sapXep == 'gia' ? 'gia' : '-gia')">
+                  <img src="{{sp.hinh}}" alt="" style="width: 100%;">
+                  <div class="sp-name">
+                    {{sp.ten}}
+                  </div>
+                  <div class="sp-gia mt-2" style="color: #8a733f;">
+                    {{sp.gia | number : 0}}
+                    <!-- <del class="ms-2" style="font-size: 13px;">350</del> -->
+                  </div>
+                  <div class="btn-them-sp" style="cursor: pointer;" ng-click="addItem(sp)">
+                    <i class="fa-solid fa-plus p-1" style="background-color: rgb(186, 185, 185); border-radius: 50%; position: absolute; right: 18px; bottom: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+
+
+        </div>
+
+        <div class="col-3">
+
+          <!-- <div class="row-cols-sm-1" ng-if="xoatatca">
+            <div class="d-flex justify-content-between " style="height: 30px; padding: 5px;">
+              <div class="d-flex align-items-center" style="font-weight: 500;">Giỏ Hàng của tôi</div>
+              <button style="font-size: 10px;" class="btn-xoa-all" ng-click="deleteAll()">Xóa tất cả mặt hàng</button>
+            </div>
+          </div> -->
+
+          <div class="row-cols-sm-1">
+            <div class="d-flex justify-content-between " style="height: 30px; padding: 5px;" >
+                <div class="d-flex align-items-center" style="font-weight: 500;">Giỏ Hàng của tôi</div>
+                <button style="font-size: 10px;" class="btn-xoa-all" ng-click="deleteAll()">Xóa tất cả mặt hàng</button>
+            </div>
+          </div>
+          <hr class="hr-giohang">
+          <div>
+
+            <div class="san-pham"  ng-if="giohang">
+              <div class="border border-secondary rounded  mt-2 ">
+                <div class="sp-body d-flex flex-column justify-content-evenly p-3" style="width: 100%" >
+                  <div class="title d-inline-block text-center" style="font-size: 13px; font-weight: 600; width: 100%;">
+                    Hiện tại không có sản phẩm nào trong giỏ hàng
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="san-pham" ng-repeat="sp in dataGioHang">
+
+              <div class="border border-secondary rounded  mt-2 d-flex justify-content-between">
+                <div class="sp-head">
+                  <img src="{{sp.hinh}}" class="img-thumbnail" alt="" style="height: 100px; width: 80px;">
+                </div>
+                <div class="sp-body d-flex flex-column justify-content-evenly ms-2" style="width: 185px;" >
+                  <div class="title d-inline-block text-truncate" style="font-size: 13px; font-weight: 600; width: 100%;">
+                    {{sp.ten}}
+                  </div>
+                  <div class=" d-flex" style="width: 55%; font-size: 13px; font-weight: lighter;">Số Lượng : 
+                    <div style="width: 30%; margin-left: 10px; font-weight: bolder; ">{{sp.soluong}}</div>
+                  </div>
+                  <div class=" d-flex" style="width: 55%; font-size: 13px; font-weight: lighter;">Giá : 
+                    <div style="width: 30%; margin-left: 10px; font-weight: bolder; ">{{sp.gia | number : 0}}</div>
+                  </div>
+                </div>
+                <div class="sp-footer d-flex align-items-center">
+                    <button class="sp-btn" ng-click="deleteSP($index,sp)"><i class="fa-solid fa-xmark" style="color: rgb(60, 59, 59);"></i></button>
+                </div>
+              </div>
+              
+            </div>
+            <hr class="hr-giohang mt-2">
+            <div class="mt-2 d-flex align-items-center">
+              <img src="hinh/icon_thanh_toan.png" alt="" style="width: 25px; height: 35px;">
+              : 
+              <!-- số lượng ly -->
+              <div class="ms-1">
+                {{soluong}}
+              </div>
+              <div>
+                <i class="fa-solid fa-arrow-right me-2 ms-2"></i>
+              </div>
+              =
+              <!-- tống số tiền -->
+              <div class="ms-1" >
+                {{thanhtien | number : 0}}
+              </div>
+              Đ
+
+            </div>
+            <hr class="hr-giohang mt-2">
+            <div class="mt-2">
+              <button class="d-flex w-100 justify-content-center p-2 rounded-5" style="background-color: rgb(255, 195, 83); border-style: none;" ng-click="loadacc()">Thanh toán</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  
+
+    </div>
+  </body>
+  <script src="controller/angular.min.js"></script>
+  <script src="controller/angular-route.min.js"></script>
+  <script src="../controller/angular-giohang.js"></script>
+  <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/fe7d543762.js" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,170 @@
+.head-card{
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+    height: 50px;
+    font-family: Muli;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.text-color{
+    color: rgb(255, 255, 255) !important;
+    font-weight: bolder;
+}
+
+.list-tintuc p:hover{
+    cursor: pointer;
+    color: #958b8b;
+    
+}
+
+.btn-tintuc a{
+    border: #d3b673; 
+    border-width: 2px; 
+    border-style: solid; 
+    padding: 2px 10px 2px 10px;
+    background-color: #d3b673;
+    color: white;
+    font-size: 13px;
+}
+
+.btn-tintuc a:hover{
+    border: #d3b673; 
+    border-width: 2px; 
+    border-style: solid; 
+    padding: 2px 10px 2px 10px;
+    background-color: #d3b67300;
+    color: #d3b673;
+    font-size: 13px;
+}
+
+.bg-tintuc {
+    background-color: #f5f5f5;
+}
+
+
+/* nền footer */
+footer{
+    background: url(hinh/footer.png) local center;
+    background-size: cover;
+    position: relative;
+}
+/* .footer-tong{
+    height: 440px;
+} */
+
+.dowload{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dowload a{
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+
+.footer-title{
+    color: #d3b673;
+    margin-bottom: 30px;
+    font-style: normal !important;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-line{
+    margin-bottom: 10px;
+    color: white;
+}
+.footer-line i{
+    color: #d3b673;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.footer-line .soccial{
+    margin-bottom: 10px;
+
+}
+.soccial i{
+    font-size: 20px;
+}
+a{
+    color: #0d6efd00;
+}
+a:hover{
+    color: #0d6efd00;
+}
+
+.footer-content{
+    padding: 0;
+    color: white;
+}
+.footer-content li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.bottom-footer{
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.bottom-footer .left{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 4px;
+}
+
+.bottom-footer .right{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 900px) {
+    footer{
+        background: url(hinh/footer.png) fixed center;
+        position: relative;
+        height: 560px;
+    }
+
+    .footer-tong{
+        height: 560px;
+    }
+
+    .main-footer img{
+        margin-top: 10px;
+    }
+
+    .main-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dowload{
+        display: none;
+    }
+
+    .footer-1{
+        height: 250px;
+    }
+
+    .footer-2{
+        display: none;
+    }
+    .bottom-footer{
+        margin-top: 30px;
+        height: 75px;
+    }
+
+
+}

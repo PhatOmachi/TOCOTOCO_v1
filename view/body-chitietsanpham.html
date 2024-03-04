@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <div>
+      <div style="position: relative; height: 9.9vh; background-color: rgba(0, 0, 0, 0.222);" class="w-100"></div>
+      <!-- <img src="hinh/tin_tuc_nav.png" style="height: 69px; width: 100%; object-fit: cover;" class="" alt="..."> -->
+  </div>
+</div>
+
+<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.035);" id="dautrang" >
+        <div class="container">
+          <div class="row">
+              <div class="col-5" style="display: flex; flex-direction: column; align-items: center;">
+                  <!-- <img src="hinh/sp/tra_chanh_gia_tay_1L.jpg" class="img-thumbnail" alt="" style="height: 306px; width: 306px;"> -->
+                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner " style="overflow: hidden;">
+                      <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="{{dataDaLoad.anh[0]}}" class="d-block w-100 img-thumbnail" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="200">
+                        <img src="{{dataDaLoad.anh[0]}}" class="d-block w-100 img-thumbnail" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{{dataDaLoad.anh[0]}}" class="d-block w-100 img-thumbnail alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="row pt-2">
+                      <div class="col anh-nho">
+                          <img src="{{dataDaLoad.anh[0]}}" class="img-thumbnail" alt="" style="height: 80px; width: 80px;">
+                          <img src="{{dataDaLoad.anh[0]}}" class="img-thumbnail" alt="" style="height: 80px; width: 80px;">
+                          <img src="{{dataDaLoad.anh[0]}}" class="img-thumbnail" alt="" style="height: 80px; width: 80px;">
+                          <img src="{{dataDaLoad.anh[0]}}" class="img-thumbnail" alt="" style="height: 80px; width: 80px;">
+                          <img src="{{dataDaLoad.anh[0]}}" class="img-thumbnail" alt="" style="height: 80px; width: 80px;">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-7">
+                  <h2 class="p-3" style="color: rgb(255, 195, 83); font-weight: bolder;">{{dataDaLoad.ten}}</h2>
+                  <h3 class="p-3" style="color: rgb(255, 195, 83); font-weight: bolder;">{{dataDaLoad.gia}}đ</h3>
+                  <div class="p-3">
+                      <div class="pb-2">
+                          <span style="font-weight: bolder; color: gray;" >Số lượng</span>
+                      </div>
+                      <div class="btn-group border border-dark" role="group" aria-label="Basic outlined example">
+                          <button type="button" class="btn border border-dark" ng-click="trusp()">-</button>
+                          <div  class="btn border border-dark disabled" style="padding-left: 30px; padding-right: 30px;" >{{dataDaLoad.soluong}}</div>
+                          <button type="button" class="btn border border-dark" ng-click="congsp()">+</button>
+                        </div>
+                  </div>
+                  <div class="p-3">
+                      <a href="#!view/giohang" class="p-2 rounded dathang" style="text-decoration: none; font-weight: bolder; "><i class="fa-solid fa-cart-shopping"></i> Đặt hàng ngay</a>
+                      <a href="#!view/giohang" class="p-2 rounded dathang" style="text-decoration: none; font-weight: bolder; margin-left: 10px;"><i class="fa-solid fa-plus"></i>Thêm</a>
+                  </div>
+              </div> 
+          </div>
+          <hr>
+          <div class="container">
+            <h3 style="color: rgb(0, 0, 0);">Nguyên nguyện làm nên món uống tuyểt vời này</h3>
+            <div class="fs-5 ps-3">
+              {{dataDaLoad.noidung}}
+            </div>
+          </div>
+          <hr>
+          <div class="container">
+            <h3>Các câu hỏi thường gặp khi uống trà sữa</h3>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Uống trà sữa có mập hông?
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Uống vừa vừa thôi, uống quá đơn nhiên là mập rồi, thay vì uống trà sữa thì mình thử uồng trà trái cây xem, có mập nhưng không đáng kể 😄</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Tui có thể gọi ít đường cho món của mình không ?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Đơn nhiên là bạn có thể gọi ít đường cho món uống của mình, bạn chỉ cần ghi chú lại trên app (online) hoặc tại quầy (offline) thì nhân viên sẽ làm độ ngọt theo ý thích của bạn</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Tui có thể mua thêm topping cho trà sữa của mình?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Chắc chắn là bạn có thể mua thêm topping cho trà sữa của mình rồi, bạn chỉ cần ghi chú lại trên app (online) hoặc tại quầy (offline) thì nhân viên sẽ làm độ ngọt theo ý thích của bạn</div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        
+        </div>
+</div>

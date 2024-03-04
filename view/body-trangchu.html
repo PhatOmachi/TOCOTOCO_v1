@@ -1,0 +1,379 @@
+<!-- slide -->
+<div id="carouselExample" class="carousel slide " ng-controller="trangchuctrl">
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+        <div style="position: absolute; background-color: rgba(0, 0, 0, 0.182);" class="w-100 h-100"></div>
+        <img src="hinh/Slide_banner-1.jpg" class="d-block w-100 bl" alt="...">
+      </div>
+      <div class="carousel-item">
+        <div style="position: absolute; background-color: rgba(0, 0, 0, 0.182);" class="w-100 h-100"></div>
+        <img src="hinh/dong-gia-size-L-25k-tocotoco-1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <div style="position: absolute; background-color: rgba(0, 0, 0, 0.182);" class="w-100 h-100"></div>
+        <img src="hinh/Tocotoco-ly-khong-lo-1-lit.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" >
+      <span aria-hidden="true"><i class="fa-solid fa-chevron-left" style="font-size: 40px;"></i></span>
+      <span class="visually-hidden " >Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span aria-hidden="true"><i class="fa-solid fa-chevron-right" style="font-size: 40px;"></i></span>
+      <span class="visually-hidden " >Next</span>
+    </button>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>
+        <a href="#!view/giohang" class="border border-light p-2 dat-hang" style="text-decoration: none; color: white;">ĐẶT HÀNG NGAY</a>
+      </h5>
+      <p><i class="fa-solid fa-computer-mouse fa-beat-fade"  style="font-size: 40px; margin-top: 10px;"></i></p>
+      <h5>
+        <span class="p-2" style="font-weight: 300;">Cuộn xuống</span>
+      </h5>
+    </div>
+  </div>
+
+  <!-- giới thiệu sản phẩm -->
+  <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 10px;">
+    <div class="card border border-0" style="width: auto">
+      <div class="card-body " >
+        <p class="card-text fs-3 text-center" style="color: rgb(255, 195, 83); font-weight: bolder;">ToCoToCo Menu</p>
+        <p class="card-text fs-2 text-center" style="color: rgb(0, 0, 0); font-weight: bolder;">SẢN PHẨM NỔI BẬC</p>
+      </div>
+      <img src="hinh/home_line.webp" class="card-img-top" alt="...">
+    </div>
+  </div>
+  
+
+  <!-- list sản phẩm nổi bậc -->
+  <div class="list-sp-nb" style="padding-top: 20px;">
+    <div class="container">
+      <div class="row" >
+        
+        <div class="col-md-3" ng-repeat="spTrangChu in dssp | limitTo:8:0 | orderBy :'id'">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="img">
+              <img src="{{spTrangChu.anh[0]}}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">{{spTrangChu.ten}}</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">{{spTrangChu.gia}} 
+                <!-- <span style="font-size: 13px; margin-left: 10px; color: gray;"><del >43,000Đ</del></span> -->
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#!view/body-trangchu/{{spTrangChu.id}}" ">ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">17%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/tra_chanh_gia_tay_700.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">Trà Chanh Giã Tay 700</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">25,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>30,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div> -->
+
+
+        <!-- <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">29%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/Olong_sua.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">Ô Long Sữa Trân Châu Ngũ Cốc</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">25,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>43,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div> -->
+
+
+
+        <!-- <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">22%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/sua_nhai_xanh.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">Người Bạn Xanh Sữa Nhài Khổng Lồ</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">35,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>45,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div> -->
+
+
+
+        <!-- <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">22%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/sua_nhai_xanh.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">Người Bạn Xanh Sữa Nhài Khổng Lồ</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">35,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>45,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">22%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/tra_hoa_hong.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">ToCo Trà Chanh Hoa Hồng</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">35,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>45,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">19%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/cafe.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">Cà Phê Đen Đá</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">18,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>43,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-3">
+          <div class="card border-bottom" style="overflow: hidden; box-shadow: 0px 2px 1.5px 0px #ccc;">
+            <div class="tag-con">
+              <div class="discount" style="color: rgb(255, 255, 255); font-weight: bolder; transform: rotate(-20deg);">New</div>
+              <div class="discount" style="color: #8a733f; font-weight: bolder; background-color: black;">22%</div>
+            </div>
+            <div class="img">
+              <img src="hinh/sp/chan_chau_duong_den.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body text-center down-list" style="background-color: #f5f5f5; display: flex; flex-direction:column">
+              <p class="card-text d-inline-block text-truncate" style="color: black; font-weight: bolder;">Sữa Tươi Trân Châu Đường Đen Khổng Lồ</p>
+              <p class="card-text" style="color: #8a733f; font-weight: bold;">35,000Đ 
+                <span style="font-size: 13px; margin-left: 10px; color: gray;"><del>45,000Đ</del></span>
+              </p>
+              <p style="margin-top: 5px;" class=""><a class="btn-link border border-warning" href="#" >ĐẶT HÀNG</a></p>
+            </div>
+          </div>
+        </div> -->
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- thêm -->
+  <div style="display: flex; justify-content: center; margin: 20px 0px 40px 0px;">
+    <div class="row">
+      <p style="margin-top: 5px;" class="">
+        <div class="mt-3 btn-gt" style="display: flex; justify-content: center;">
+        <a class="" href="#" style="text-decoration: none;">XEM TẤT CẢ </a>
+      </p>
+    </div>
+  </div>
+    
+  </div>
+
+  <!-- hình giới thiếu -->
+  <div>
+    <div class="container">
+      <div class="box1" style="position: relative;">
+        <img src="hinh/hinh_trang_chu.png" alt="" class="img-fluid">
+        <div class="box-hinh-1" style="">
+          <div class="header" style="display: flex; flex-direction: column; align-items: center; ">
+            <p class="card-text fs-4 text-center" style="color: rgb(255, 195, 83); margin-bottom: 5px; font-weight: bolder;">ToCoToCo Story</p>
+            <p class="card-text fs-2 text-center" style="color: rgb(0, 0, 0); font-weight: bolder;">Về chúng tôi</p>
+            <img src="hinh/home_line.webp" class="card-img-top" alt="..." style="width: 315px; height: 30px;">
+          </div>
+          <div class="box-body">
+            <p class="card-text text-center " style="color: black;"> Bên cạnh niềm tự hào về những ly trà sữa ngon – sạch – tươi, chúng tôi luôn tự tin
+              mang đến khách hàng những trải nghiệm tốt nhất về dịch vụ và không gian. </p>
+          </div>
+          <div class="mt-3 btn-gt" style="">
+            <a class="" href="#" style="text-decoration: none;">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-3">
+    <div class="container">
+      <div class="box2">
+        <img src="hinh/hinh_trang_chu1.png" alt="" class="img-fluid">
+        <div class="box-hinh-2">
+          <div class="header" style="display: flex; flex-direction: column; align-items: center; ">
+            <p class="card-text fs-4 text-center" style="color: rgb(255, 195, 83); margin-bottom: 5px; font-weight: bolder;">ToCoToCo Franchise</p>
+            <p class="card-text fs-2 text-center" style="color: rgb(0, 0, 0); font-weight: bolder;">Nhượng quyền</p>
+            <img src="hinh/home_line.webp" class="card-img-top" alt="..." style="width: 315px; height: 30px;">
+          </div>
+          <div class="box-body">
+            <p class="card-text text-center" style="color: black;">Gia nhập đế chế 300 TRIỆU USD. Nếu bạn bắt đầu kinh doanh khởi nghiệp ẩm thực,
+              hoặc muốn đầu tư vào lĩnh vực này, thương hiệu ToCoToCo chắc chắn sẽ là một lựa chọn đáng cân nhắc cho
+              bạn. </p>
+          </div>
+          <div class="mt-3 btn-gt" style="">
+            <a class="" href="#" style="text-decoration: none;">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- tin tức và khuyến mãi  -->
+  <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 10px; align-items: center;" class="mt-3">
+    <div class="card border border-0" style="width: auto">
+      <div class="card-body " >
+        <p class="card-text fs-5 text-center" style="color: rgb(255, 195, 83); font-weight: bolder;" >Tin tức và khuyến mãi</p>
+        <p class="card-text fs-2 text-center text-uppercase" style="color: rgb(0, 0, 0); font-weight: bolder;">Khám phá tocotoco và nhận khuyến mãi</p>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <img src="hinh/home_line.webp" class="" alt="..." style="width: 315px; height: 30px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- tin tức -->
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          
+
+          <div class="card border border-0 km-hieuung" style="width:fit-content; overflow: hidden; padding: 0;">
+            <div class="">
+              <img src="hinh/km1.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body " style="background-color: #f5f5f5; z-index: 1;">
+              <p class="card-text text-uppercase " style="font-size: 15px; color: rgb(0, 0, 0);">TOCO DẪN ĐẦU TUNG LY TẾT 2024 RỒNG TRAO LỘC RỰC RỠ</p>
+              <div class="mt-2">
+                <p class="card-text text-truncate" style="color: gray;"> Trước thềm Tết Giáp Thìn, ToCoToCo đưa biểu tượng mới của năm nay – Rồng Trao Lộc lên thiết kế bao bì của mình đồng hành cùng biểu tượng châu […] </p>
+                <div class="mt-3 btn-gt" style="">
+                  <a class="" href="#" style="text-decoration: none;">XEM THÊM</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mt-3">
+          <div class="col-6">
+            <div class="card border border-0 km-hieuung" style="width:fit-content; overflow: hidden; padding: 0;">
+              <div class="">
+                <img src="hinh/km2.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body " style="background-color: #f5f5f5; z-index: 1;">
+                <!-- <p class="card-text text-uppercase " style="font-size: 15px; color: rgb(0, 0, 0);">TOCO DẪN ĐẦU TUNG LY TẾT 2024 RỒNG TRAO LỘC RỰC RỠ</p> -->
+                <div class="mt-2 ">
+                  <p class="card-text " style="color: gray; font-weight: 500;">Bộ đôi món mới nhà ToCoToCo: 3 topping kết hợp siêu cuốn, uống vào siêu dính</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card border border-0 km-hieuung" style="width:fit-content; overflow: hidden; padding: 0;">
+              <div class="">
+                <img src="hinh/km3.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body " style="background-color: #f5f5f5; z-index: 1;">
+                <!-- <p class="card-text text-uppercase " style="font-size: 15px; color: rgb(0, 0, 0);">TOCO DẪN ĐẦU TUNG LY TẾT 2024 RỒNG TRAO LỘC RỰC RỠ</p> -->
+                <div class="mt-2">
+                  <p class="card-text " style="color: gray; font-weight: 500;">XUẤT HIỆN TRÀ CHANH MẬT ONG GIÃ TAY 1 LÍT, TOCOTOCO TẠO LÀN SÓNG MỚI MẠNG XÃ HỘI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="card border border-0 km-hieuung" style="width:fit-content; overflow: hidden; padding: 0;">
+              <div class="">
+                <img src="hinh/km4.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body " style="background-color: #f5f5f5; z-index: 1;">
+                <!-- <p class="card-text text-uppercase " style="font-size: 15px; color: rgb(0, 0, 0);">TOCO DẪN ĐẦU TUNG LY TẾT 2024 RỒNG TRAO LỘC RỰC RỠ</p> -->
+                <div class="mt-2">
+                  <p class="card-text" style="color: gray; font-weight: 500;">Trà chanh mật ong giã tay: “siêu phẩm” cực hot của ToCoToCo chính thức chào sân</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card border border-0 km-hieuung" style="width:fit-content; overflow: hidden; padding: 0;">
+              <div class="">
+                <img src="hinh/km5.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body " style="background-color: #f5f5f5; z-index: 1;">
+                <!-- <p class="card-text text-uppercase " style="font-size: 15px; color: rgb(0, 0, 0);">TOCO DẪN ĐẦU TUNG LY TẾT 2024 RỒNG TRAO LỘC RỰC RỠ</p> -->
+                <div class="mt-2">
+                  <p class="card-text" style="color: gray; font-weight: 500;">KHÁM PHÁ BÍ MẬT BÊN TRONG LY TRÀ CHANH MẬT ONG GIÃ TAY GÂY SÓNG CỘNG ĐỒNG MẠNG</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" style="display: flex; justify-content: space-evenly;">
+        <div class="card border border-0 km-hieuung" style="width:fit-content; overflow: hidden; padding: 0; height: min-content;">
+          <div class="hinh-anh">
+            <img src="hinh/km6.png" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

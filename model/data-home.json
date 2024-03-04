@@ -1,0 +1,84 @@
+[
+    {
+        "id" : 12,
+        "ten" : "Trà chanh giã tay",
+        "gia" : 25000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/tra_chanh_gia_tay_1L.jpg","hinh/sp/tra_chanh_gia_tay_1L-2.jpg","hinh/sp/tra_chanh_gia_tay_1L-3.jpg","hinh/sp/tra_chanh_gia_tay_1L-4.jpg"],
+        "giamgia" : false,
+        "loai" : "Fresh Fruit Tea",
+        "noidung" : "Trà Chanh Mật Ong Giã Tay tại đây chính là 100% tự nhiên, đem lại nhiều Vitamin C và các chất chống lão hóa, tốt cho sức khỏe người dùng. Với những ngày giá rét của mùa đông cuối năm của Hà Nội, trà chanh mật ong giã tay có thể uống nóng để bất cứ ai cũng có thể sưởi ấm cơ thể và cả trái tim của “người ấy”. ToCoToCo tinh tế sử dụng mật ong ấm nóng kết hợp cùng nước cốt và tép chanh trong sản phẩm nóng cực kỳ tốt cho cổ họng và sức khỏe người tiêu dùng."
+    },
+    {
+        "id" : 2,
+        "ten" : "Chân châu đường đen",
+        "gia" : 35000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/chan_chau_duong_den.jpg","hinh/sp/chan_chau_duong_den-1.jpg","hinh/sp/chan_chau_duong_den-2.jpg","hinh/sp/chan_chau_duong_den-3.jpg"],
+        "loai" : "Trà Sữa",
+        "noidung" : "Chân châu đường đen - sự kết hợp tinh tế giữa viên chân châu mềm mại và đường đen tự nhiên. Với hương vị ngọt ngào và kết cấu độc đáo, đây không chỉ là một đồ uống, mà là trải nghiệm độc đáo trong thế giới đồ uống sáng tạo. Thành công của chân châu đường đen đã làm mới không khí trong ngành trà sữa, thu hút sự chú ý của những người yêu thích độc đáo và ngon miệng."
+    },
+    {
+        "id" : 23,
+        "ten" : "Cafe",
+        "gia" : 18000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/cafe.jpg","hinh/sp/cafe-1.png","hinh/sp/cafe-2.jfif","hinh/sp/cafe3.jpg"],
+        "loai" : "Cafe",
+        "noidung" : "Cafe - Hương thơm đắng ngọt, nguồn cảm hứng, làm mới tinh thần. Mỗi giọt cafe là một câu chuyện riêng, đưa vào thế giới đầy ý tưởng và sức sống. Nó không chỉ là đồ uống mỗi ngày, mà là nguồn năng lượng cho sự sáng tạo và gặp gỡ, tạo nên những khoảnh khắc đáng nhớ"
+    },
+    {
+        "id" : 13,
+        "ten" : "Trà Chanh Giã Tay 700ml",
+        "gia" : 25000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/TraChanhGiaTay.jpg"],
+        "loai" : "Trà",
+        "noidung" : "Trà Chanh Mật Ong Giã Tay tại đây chính là 100% tự nhiên, đem lại nhiều Vitamin C và các chất chống lão hóa, tốt cho sức khỏe người dùng. Với những ngày giá rét của mùa đông cuối năm của Hà Nội, trà chanh mật ong giã tay có thể uống nóng để bất cứ ai cũng có thể sưởi ấm cơ thể và cả trái tim của “người ấy”. ToCoToCo tinh tế sử dụng mật ong ấm nóng kết hợp cùng nước cốt và tép chanh trong sản phẩm nóng cực kỳ tốt cho cổ họng và sức khỏe người tiêu dùng."
+    },
+    {
+        "id" : 8,
+        "ten" : "Olong Sữa",
+        "gia" : 25000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/Olong_sua.jpg","hinh/sp/Olong_sua-1.jpg","hinh/sp/Olong_sua-2.jpg"],
+        "loai" : "Trà Sữa",
+        "noidung" : "Olong Sữa - Sự kết hợp tinh tế giữa trà olong thơm ngon và độ béo ngậy của sữa, tạo nên đồ uống tràn đầy hương vị hấp dẫn. Mỗi ngụm Olong Sữa là hành trình khám phá hương thơm và cảm nhận sự hòa quyện độc đáo của trà olong và sữa, mang đến trải nghiệm thưởng thức trà sữa độc đáo."
+    },
+    {
+        "id" : 3,
+        "ten" : "Trà sữa olong xanh",
+        "gia" : 20000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/sua_nhai_xanh.jpg","hinh/sp/sua_nhai_xanh-1.jpg"],
+        "loai" : "Trà Sữa",
+        "noidung" : "Trà Sữa Olong Xanh - Một tác phẩm hòa quyện giữa hương thơm tinh tế của trà olong xanh và độ béo ngậy của sữa tươi. Hòa mình trong hương trà truyền thống và vị sữa ngọt ngào, mỗi ngụm trà sữa là một hành trình khám phá vị giác. Chúng tôi tỉ mỉ chọn lựa từng lá trà olong xanh tươi ngon, kết hợp cùng sữa tươi đặc biệt, tạo ra một đồ uống độc đáo, phản ánh tinh hoa ẩm thực truyền thống. Trà Sữa Olong Xanh không chỉ là thức uống, mà là trải nghiệm văn hóa, hấp dẫn vị giác và tinh tế."
+    },
+    {
+        "id" : 18,
+        "ten" : "Kem Dâu",
+        "gia" : 25000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/kem_dau.jpg","hinh/sp/kem_dau-1.png","hinh/sp/kem_dau-2.png"],
+        "loai" : "Kem",
+        "noidung" : "Kem Dâu - Sự kết hợp hoàn hảo giữa kem mềm mại và hương vị tinh tế của dâu tươi. Hấp dẫn người thưởng thức bằng vị ngọt ngào và màu sắc tươi tắn. Mỗi muỗng kem là chuyến phiêu lưu vị giác, mang lại trải nghiệm ngon miệng, tươi mới và đầy sáng tạo. Kem Dâu, không chỉ là một loại kem, mà là một hành trình thưởng thức hương vị tuyệt vời từ hòa quyện giữa kem và hương dâu tươi."
+    },
+    {
+        "id" : 19,
+        "ten" : "Kem Dâu",
+        "gia" : 25000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/kem_dau-1.png"],
+        "loai" : "Kem",
+        "noidung" : "Kem Dâu - Sự kết hợp hoàn hảo giữa kem mềm mại và hương vị tinh tế của dâu tươi. Hấp dẫn người thưởng thức bằng vị ngọt ngào và màu sắc tươi tắn. Mỗi muỗng kem là chuyến phiêu lưu vị giác, mang lại trải nghiệm ngon miệng, tươi mới và đầy sáng tạo. Kem Dâu, không chỉ là một loại kem, mà là một hành trình thưởng thức hương vị tuyệt vời từ hòa quyện giữa kem và hương dâu tươi."
+    },
+    {
+        "id" : 8,
+        "ten" : "Trà Chanh Giã Tay 700ml",
+        "gia" : 25000,
+        "soluong" : 1,
+        "anh" : ["hinh/sp/TraChanhGiaTay.jpg"],
+        "loai" : "Kem",
+        "noidung" : "Trà Chanh Mật Ong Giã Tay tại đây chính là 100% tự nhiên, đem lại nhiều Vitamin C và các chất chống lão hóa, tốt cho sức khỏe người dùng. Với những ngày giá rét của mùa đông cuối năm của Hà Nội, trà chanh mật ong giã tay có thể uống nóng để bất cứ ai cũng có thể sưởi ấm cơ thể và cả trái tim của “người ấy”. ToCoToCo tinh tế sử dụng mật ong ấm nóng kết hợp cùng nước cốt và tép chanh trong sản phẩm nóng cực kỳ tốt cho cổ họng và sức khỏe người tiêu dùng."
+    }
+]

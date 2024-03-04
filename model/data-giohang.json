@@ -1,0 +1,332 @@
+[
+    
+    {
+        "id" : 1,
+        "ten" : "Ô Long Sữa Trân Châu Ngũ Cốc",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSua.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 2,
+        "ten" : "Sữa Tươi Trân Châu Đường Đen Không Lồ",
+        "gia" : 35000,
+        "giam" : 45000,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/SuaTuoiTranChauDuongKhongLo.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 3,
+        "ten" : "Người Bạn Sữa Nhài Khổng Lồ",
+        "gia" : 35000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaNhaiKhongLo.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 4,
+        "ten" : "Sữa Tươi Trân Châu Đường Đen",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaTranChauDuongHo.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 5,
+        "ten" : "Trà Sữa Phô Mai Tươi",
+        "gia" : 40000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaPhoMaiTuoi.png",
+        "soluong" : 1
+    },
+    {
+        "id" : 6,
+        "ten" : "Trà Sữa Trân Châu Hoàng Gia",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaTranChauHoangGia.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 7,
+        "ten" : "Trà Sữa Ba Anh Em",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaBaAnhEm.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 8,
+        "ten" : "Trà Sữa Ô Long",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/OLongSuaTranChauNguCoc.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 9,
+        "ten" : "Trà Sữa Socola",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaSocola.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 10,
+        "ten" : "Trà Sữa Dâu Tây",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSuaDauTay.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 11,
+        "ten" : "Trà Sữa",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trà Sữa",
+        "hinh" : "hinh/giohang/TraSua.jpg",
+        "soluong" : 1
+    }
+
+
+
+
+
+
+
+    ,
+    {
+        "id" : 12,
+        "ten" : "Trà Chanh Mật Ong Giã Tay Khổng Lồ",
+        "gia" : 35000,
+        "giam" : 43000,
+        "loai" : "Trái Cây",
+        "hinh" : "hinh/giohang/TraChanhGiaTayKhongLo.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 13,
+        "ten" : "Trà Chanh Mật Ong Giã Tay",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trái Cây",
+        "hinh" : "hinh/giohang/TraChanhGiaTay.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 14,
+        "ten" : "ToCo Người Bạn Khổng Lồ",
+        "gia" : 35000,
+        "giam" : 0,
+        "loai" : "Trái Cây",
+        "hinh" : "hinh/giohang/ToCoNguoiBanKhongLo.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 15,
+        "ten" : "Ô Long Mận Mộc Châu Thạch Quế Hoa",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trái Cây",
+        "hinh" : "hinh/giohang/OLongManMocChauThachQueHoa.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 16,
+        "ten" : "Trà Dâu Tằm Pha Lê Tuyết",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trái Cây",
+        "hinh" : "hinh/giohang/TraDauTamPhaLeTuyet.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 17,
+        "ten" : "Trà Dứa Thạch Konjac",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Trái Cây",
+        "hinh" : "hinh/giohang/TraDuaThachKonjac.jpg",
+        "soluong" : 1
+    }
+
+
+
+
+
+
+
+
+    ,
+    {
+        "id" : 18,
+        "ten" : "Ô Long Mận Kem Phô Mai",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Cheese",
+        "hinh" : "hinh/giohang/OLongManKemPhoMai.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 19,
+        "ten" : "Ô Long Kem Phô Mai",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Cheese",
+        "hinh" : "hinh/giohang/OLongKemPhoMai.png",
+        "soluong" : 1
+    },
+    {
+        "id" : 20,
+        "ten" : "Dâu Tằm Kem Phô Mai",
+        "gia" : 40000,
+        "giam" : 0,
+        "loai" : "Cheese",
+        "hinh" : "hinh/giohang/DauTamKemPhoMai.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 21,
+        "ten" : "Hồng Trà Kem Phô Mai",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Cheese",
+        "hinh" : "hinh/giohang/HongTraKemPhoMai.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 22,
+        "ten" : "Trà Xanh Kem Phô Mai",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Cheese",
+        "hinh" : "hinh/giohang/TraXanhKemPhoMai.jpg",
+        "soluong" : 1
+    },
+
+
+
+
+
+
+
+
+    
+    {
+        "id" : 23,
+        "ten" : "Cafe Đen Đá",
+        "gia" : 15000,
+        "giam" : 0,
+        "loai" : "Cafe",
+        "hinh" : "hinh/giohang/CafeDen.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 24,
+        "ten" : "Cafe Sữa Đá",
+        "gia" : 14000,
+        "giam" : 0,
+        "loai" : "Cafe",
+        "hinh" : "hinh/giohang/CafeSua.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 25,
+        "ten" : "Cafe Trân Châu",
+        "gia" : 20000,
+        "giam" : 0,
+        "loai" : "Cafe",
+        "hinh" : "hinh/giohang/CafeKemTranChauHoangKim.jpg",
+        "soluong" : 1
+    }
+
+
+
+
+
+
+    ,
+    {
+        "id" : 26,
+        "ten" : "Kem Dâu",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Kem",
+        "hinh" : "hinh/giohang/KemDau.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 27,
+        "ten" : "Cafe Kem Trân Châu Hoàng Kim",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Kem",
+        "hinh" : "hinh/giohang/KemTranChauHoangKim.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 28,
+        "ten" : "Kem Trân Châu Hoàng Kim",
+        "gia" : 25000,
+        "giam" : 0,
+        "loai" : "Kem",
+        "hinh" : "hinh/giohang/KemTranChauHoangKim.jpg",
+        "soluong" : 1
+    },
+
+
+
+
+    
+    {
+        "id" : 29,
+        "ten" : "Combo set 6 ly - Milk Tea - Strawberry",
+        "gia" : 165000,
+        "giam" : 0,
+        "loai" : "Instant",
+        "hinh" : "hinh/giohang/InstantStrawberry6ly.png",
+        "soluong" : 1
+    },
+    {
+        "id" : 30,
+        "ten" : "Combo set 6 ly - Milk Tea - Original",
+        "gia" : 160000,
+        "giam" : 0,
+        "loai" : "Instant",
+        "hinh" : "hinh/giohang/InstantOriginal6ly.png",
+        "soluong" : 1
+    },
+    {
+        "id" : 31,
+        "ten" : "Instant Milk Tea - Strawberry",
+        "gia" : 26000,
+        "giam" : 0,
+        "loai" : "Instant",
+        "hinh" : "hinh/giohang/InstantStrawberry.jpg",
+        "soluong" : 1
+    },
+    {
+        "id" : 32,
+        "ten" : "Instant Milk Tea - Original",
+        "gia" : 26000,
+        "giam" : 0,
+        "loai" : "Instant",
+        "hinh" : "hinh/giohang/InstantOriginal.jpg",
+        "soluong" : 1
+    }
+
+
+    
+]

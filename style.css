@@ -1,0 +1,427 @@
+.cb{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+
+/* nav */
+.m-in-menu{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dropdown-item{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.text-color{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.dropdown-item:hover{
+    color: rgb(255, 195, 83);
+    background-color: rgba(252, 252, 252, 0);
+}
+
+.nav{
+    --bs-nav-link-hover-color: rgb(255, 255, 255);
+}
+
+
+.dropdown-menu{
+    background-color: #494949b0;
+    border-radius: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .text-color{
+        color: rgb(255, 195, 83);
+        font-weight: bolder;
+    } */
+
+}
+
+
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+
+/* silde */
+
+.dat-hang:hover{
+    background-color: #d3b67384;
+    /* border-color: #d3b673 !important; */
+}
+
+
+
+
+
+
+/* body */
+.carousel-caption{
+    bottom: 12.25rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .carousel-caption {
+        bottom: 5.25rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .carousel-caption {
+        bottom: 3.25rem;
+    }
+}
+
+
+/* sản phẩm nổi bậc */
+.btn-link{
+    text-decoration: none;
+    background-color: rgb(255, 195, 83);
+    padding: 5px 15px 5px 15px;
+    color: white;
+}
+
+.btn-link:hover{
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 15px 5px 15px;
+    color: rgb(255, 195, 83);
+}
+
+.card img{
+    transition: all 0.5s;
+}
+.card {
+    --bs-card-height: 94%;
+}
+
+.card .down-list{
+    transition: all 0.5s;
+}
+
+.list-sp-nb .card:hover img{
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+.list-sp-nb .card:hover .down-list{
+    position: relative;
+    top: -5px;
+}
+
+.down-list{
+    position: relative;
+    top: 42px;
+}
+
+.discount{
+    background-color: rgb(255, 195, 83);
+    display: flex;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .tag-con{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    padding: 16px;
+    top: 0;
+    justify-content: space-between;
+    z-index: 1;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .list-sp-nb .card:hover .down-list{
+        position: relative;
+        top: -20px;
+    }
+    
+    .down-list{
+        position: relative;
+        top: 20px;
+    }
+}
+
+
+
+/* thêm */
+.them-link{
+    text-decoration: none;
+    background-color: rgb(255, 195, 83);
+    padding: 10px 17px 10px 17px;
+    color: white;
+}
+.them-link:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+/* giới thiệu 1 */
+.box1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.box-hinh-1{
+    z-index: 2;
+    align-items: center;
+    position: absolute; 
+    margin-right: 40px; 
+    display: flex; 
+    flex-direction: column;
+    width: 35%;
+}
+
+.box2{
+    position: relative;
+    display: flex;
+    align-items: center;    
+    justify-content: flex-start;
+}
+
+.box-hinh-2{
+    z-index: 2;
+    align-items: center;
+    width: 35%; 
+    position: absolute; 
+    margin-left: 40px; 
+    display: flex; 
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 900px) {
+    .box-hinh-1{
+        z-index: 2;
+        align-items: center;
+        position: absolute; 
+        display: flex; 
+        flex-direction: column;
+        width: auto;
+        margin: 0;
+    }
+    .box1 img {
+        visibility: hidden;
+    }
+    .box2 img {
+        visibility: hidden;
+    }
+
+    .box2{
+        align-items: normal;
+        justify-content: space-evenly;
+    }
+    .box-hinh-2{
+        z-index: 2;
+        align-items: center;
+        position: absolute; 
+        display: flex; 
+        flex-direction: column;
+        width: auto;
+        margin: 0;
+    }
+    
+
+}
+
+
+
+
+
+
+/* btn giới thiệu */
+
+.btn-gt a{
+    border: #d3b673; 
+    border-width: 3px; 
+    border-style: solid; 
+    padding: 5px 15px 5px 15px;
+    background-color: #d3b673;
+    color: white;
+}
+.btn-gt a:hover{
+    border: #d3b673; 
+    border-width: 3px; 
+    border-style: solid; 
+    padding: 5px 15px 5px 15px;
+    background-color: #d3b67300;
+    color: #d3b673;
+}
+
+
+
+/* tin tức và khuyến mãi  */
+.km-hieuung img{
+    transition: all 0.5s;
+}
+.km-hieuung:hover img{
+    transform: scale(1.2, 1.2);
+}
+
+.hinh-anh img{
+    transition: all 0.5s;
+}
+.hinh-anh:hover img{
+    transform: scale(1.2, 1.2);
+}
+
+
+
+/* nền footer */
+footer{
+    background: url(hinh/footer.png) local center;
+    background-size: cover;
+    position: relative;
+}
+/* .footer-tong{
+    height: 440px;
+} */
+
+.dowload{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dowload a{
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+
+.footer-title{
+    color: #d3b673;
+    margin-bottom: 30px;
+    font-style: normal !important;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-line{
+    margin-bottom: 10px;
+}
+.footer-line i{
+    color: #d3b673;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.footer-line .soccial{
+    margin-bottom: 10px;
+
+}
+.soccial i{
+    font-size: 20px;
+}
+a{
+    color: #0d6efd00;
+}
+a:hover{
+    color: #0d6efd00;
+}
+
+.footer-content{
+    padding: 0;
+}
+.footer-content li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.bottom-footer{
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-footer .left{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 4px;
+}
+
+.bottom-footer .right{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 900px) {
+    footer{
+        background: url(hinh/footer.png) fixed center;
+        position: relative;
+        height: 560px;
+    }
+
+    .footer-tong{
+        height: 560px;
+    }
+
+    .main-footer img{
+        margin-top: 10px;
+    }
+
+    .main-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dowload{
+        display: none;
+    }
+
+    .footer-1{
+        height: 250px;
+    }
+
+    .footer-2{
+        display: none;
+    }
+    .bottom-footer{
+        margin-top: 30px;
+        height: 75px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
