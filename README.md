@@ -1,5 +1,5 @@
 # TOCOTOCO-fake
-nhái lại web tocotoco, với các chức năng thêm xóa sửa
+sửa lại web tocotoco, với các chức năng thêm xóa sửa
 - vui lòng chạy trên vs code để có thế chạy ổn định nhất
 - chạy Trang_Chu.html để vào trang chính thực hiện các tác vụ
 - acc test :
